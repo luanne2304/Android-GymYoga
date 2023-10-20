@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="14dp"
+    tools:context=".DrinkActivity">
+
+    <ImageView
+        android:id="@+id/ivdrinkback"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bottle"
+        android:layout_width="120dp"
+        android:layout_height="250dp"
+        android:src="@drawable/bottle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivdrinkback" />
+
+    <TextView
+        android:id="@+id/tvluongnuoc"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Lượng nước cần uống"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/bottle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvtvcanuong"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintLeft_toRightOf="@id/bottle"
+        app:layout_constraintTop_toBottomOf="@id/tvluongnuoc">
+
+        <TextView
+            android:id="@+id/tvcanuong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCD6D6"
+            android:gravity="center" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivclickeditdrink"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintLeft_toRightOf="@id/cvtvcanuong"
+        app:layout_constraintTop_toTopOf="@id/cvtvcanuong"
+        app:layout_constraintBottom_toBottomOf="@id/cvtvcanuong"
+        android:src="@drawable/edit" />
+
+    <TextView
+        android:id="@+id/tvluongnuoc2"
+        android:layout_width="141dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="25dp"
+        android:text="Hôm nay bạn đã uống"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/bottle"
+        app:layout_constraintTop_toBottomOf="@id/cvtvcanuong" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvtvdauong"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/tvluongnuoc2"
+        app:layout_constraintRight_toRightOf="@id/tvluongnuoc2"
+        app:layout_constraintTop_toBottomOf="@id/tvluongnuoc2">
+
+        <TextView
+            android:id="@+id/tvdauong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCD6D6"
+            android:gravity="center" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvluongnuoc3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Nhập lượng nước uống:"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/bottle"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="14dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvetuong"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvluongnuoc3"
+        app:layout_constraintLeft_toRightOf=" @id/tvluongnuoc3"
+        app:layout_constraintTop_toTopOf="@id/tvluongnuoc3">
+
+        <EditText
+            android:id="@+id/eduong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCD6D6"
+            android:gravity="center" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnnhapdrink"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#8BC34A"
+        android:text="Nhập"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvluongnuoc3" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvnotidrink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/btnnhapdrink"
+        app:layout_constraintRight_toRightOf=" @id/btnnhapdrink"
+        app:layout_constraintTop_toBottomOf="@id/btnnhapdrink">
+
+        <TextView
+            android:id="@+id/tvnotiuong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCD6D6"
+            android:text="Thông báo"
+            android:textAlignment="center"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnrsdrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E15252"
+        android:text="Reset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvnotidrink" />
+</androidx.constraintlayout.widget.ConstraintLayout>

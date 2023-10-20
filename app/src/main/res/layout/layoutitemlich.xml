@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+    <TextView
+        android:id="@+id/tvshowcalendar"
+        android:layout_width="260dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="SomeText"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/ivdeletecalendar"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_baseline_close_24"/>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="340dp"-->
+<!--        android:layout_height="125dp"-->
+<!--        android:padding="10dp"-->
+<!--        app:cardCornerRadius="40dp">-->
+<!--    </androidx.cardview.widget.CardView>-->
+</LinearLayout>

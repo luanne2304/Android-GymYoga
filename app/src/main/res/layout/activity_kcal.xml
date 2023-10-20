@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="14dp"
+    tools:context=".KcalActivity">
+
+    <ImageView
+        android:id="@+id/ivKcalback"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/kcal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/kcal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivKcalback" />
+
+    <TextView
+        android:id="@+id/tvluongkcal"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Lượng Kcal cần giảm"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kcal" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvetcantap"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvluongkcal">
+
+        <TextView
+            android:id="@+id/tvcantap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCD6D6"
+            android:gravity="center" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ivclickeditkcal"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="28dp"
+        android:src="@drawable/edit"
+        app:layout_constraintBottom_toBottomOf="@id/cvetcantap"
+        app:layout_constraintLeft_toRightOf="@id/cvetcantap"
+        app:layout_constraintTop_toTopOf="@id/cvetcantap"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <TextView
+        android:id="@+id/tvluongkcal2"
+        android:layout_width="141dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="25dp"
+        android:text="Hôm nay bạn đã giảm"
+        android:textAlignment="center"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvetcantap" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvtvdagiam"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/tvluongkcal2"
+        app:layout_constraintRight_toRightOf="@id/tvluongkcal2"
+        app:layout_constraintTop_toBottomOf="@id/tvluongkcal2">
+
+        <TextView
+            android:id="@+id/tvdatap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCD6D6"
+            android:gravity="center" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvnotikcal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/cvtvdagiam"
+        app:layout_constraintRight_toRightOf=" @id/cvtvdagiam"
+        app:layout_constraintTop_toBottomOf="@id/cvtvdagiam">
+
+        <TextView
+            android:id="@+id/tvnotikcal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#DCD6D6"
+            android:gravity="center"
+            android:text="Thông báo"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnrskcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E15252"
+        android:text="Reset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvnotikcal" />
+</androidx.constraintlayout.widget.ConstraintLayout>
